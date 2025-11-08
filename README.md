@@ -14,6 +14,6 @@ Make sure to have installed  the `make` command on your system.
 
 ### 2. Using MSH
 When in MSH (see 1.4.)
-To list available commands: `help`.
 
+To list available commands: `help`.
 To exit MSH: `exit`.
