@@ -23,11 +23,11 @@ Since this is written in C, you've got to compile it:
 
 This will create `msh` binary, which you can run using `./msh` (GNU/Linux, macOS) or `.\msh.exe` (Windows).
 
-You can install it using:
+You can install it on GNU/Linux using:
 `sudo make install`. You'll be asked for your password.
 
-You can also uninstall it using:
-`sudo make uninstall`
+You can also uninstall (GNU/Linux) it using:
+`sudo make uninstall`. Again, you will be asked for your password
 
 If you'd want to recompile this, run:
 `make clean`
