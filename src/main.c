@@ -37,6 +37,8 @@ int sh_prompt(){
 }
 
 int main(){ // Main function
+  printf("To see available commands type: help\n"); // Print help message
+  
   while (sh_prompt() == 0){        // If sh_prompt() ran successfully:
     if (strcmp(cmd, "exit") == 0){ // - check if command is exit,
       exit(0);                     // - if it is: exit the shell,
