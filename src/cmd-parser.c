@@ -62,7 +62,7 @@ int runcmd(const char *cmd) { // Function to run commands.
     cmd_cls();
   } else if (strcmp(arg[0], "echo") == 0 && arg[1]) {
     cmd_echo(arg[1]);
-  } else if (strcmp(arg[0], "grep") == 0 && arg[1] && arg[2) {
+  } else if (strcmp(arg[0], "grep") == 0 && arg[1] && arg[2]) {
     cmd_grep(arg[1], arg[2]);
   } else if (strcmp(arg[0], "ls") == 0) {
     cmd_ls(arg[1]);
