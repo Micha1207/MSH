@@ -2,6 +2,8 @@
 Micha1207's shell
 Tested on Fedora GNU/Linux.
 
+This program comes with NO WARRANTY; to the extent permitted by law.
+
 ## What is this?
 This is my implementation of shell program.
 It is very simple, but I'll work on extending it.
@@ -20,9 +22,12 @@ Since this is written in C, you've got to compile it:
 `make`
 
 This will create `msh` binary, which you can run using `./msh` (GNU/Linux, macOS) or `.\msh.exe` (Windows).
+
 You can install it using:
 `sudo make install`. You'll be asked for your password.
+
 You can also uninstall it using:
 `sudo make uninstall`
+
 If you'd want to recompile this, run:
 `make clean`
