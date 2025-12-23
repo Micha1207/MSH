@@ -29,7 +29,7 @@
 #include "colors.h"
 
 int runcmd(const char *cmd) { // Function to run commands.
-  char cmd_copy[256];                       // Buffer for cmd copy.
+  char cmd_copy[512];                       // Buffer for cmd copy.
   strncpy(cmd_copy, cmd, sizeof(cmd_copy)); // Copy cmd into cmd_copy
   cmd_copy[sizeof(cmd_copy) - 1] = '\0';    // Make sure string always ends with '\0' (NULL) characher
   
@@ -62,11 +62,16 @@ int runcmd(const char *cmd) { // Function to run commands.
     cmd_cls();
   } else if (strcmp(arg[0], "echo") == 0 && arg[1]) {
     cmd_echo(arg[1]);
-  } else if (strcmp(arg[0], "grep") == 0 && arg[1] && arg[2]) {
-    cmd_grep(arg[1], arg[2]);
+  } else if (strcmp(arg[0], "grep") == 0) {
+    if (arg[1] && arg[2]) {
+      printf("--- Debug: Running internal grep for [%s] in [%s] ---\n", arg[1], arg[2]);
+      cmd_grep(arg[1], arg[2]);
+    } else {
+      printf("Usage: grep <pattern> <file>\n");
+    }
   } else if (strcmp(arg[0], "ls") == 0) {
     cmd_ls(arg[1]);
-   } else if (strcmp(arg[0], "mkdir") == 0 && arg[1]) {
+  } else if (strcmp(arg[0], "mkdir") == 0 && arg[1]) {
     cmd_mkdir(arg[1]);
   } else if (strcmp(arg[0], "touch") == 0 && arg[1]) {
     cmd_touch(arg[1]);
@@ -83,6 +88,4 @@ int runcmd(const char *cmd) { // Function to run commands.
   }
   
   return 0; // Return success code.
-
-
 }
