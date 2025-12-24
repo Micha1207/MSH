@@ -21,7 +21,7 @@ Once installed, clone this project and go to it's directory:
 Since this is written in C, you've got to compile it:
 `make`
 
-This will create `msh` binary, which you can run using `./msh` (GNU/Linux, macOS) or `.\msh.exe` (Windows).
+This will create `msh` binary, which you can run using `./msh` (GNU/Linux).
 
 You can install it on GNU/Linux using:
 `sudo make install`. You'll be asked for your password.
