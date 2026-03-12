@@ -27,10 +27,10 @@ You can use your package manager (e.g. apt, dnf).
 
    Or download ZIP file directly from [project's GitHub page](https://github.com/Micha1207/MSH) and extract it.
 
-2. **Compilation**
+2. **Compilation**:
    To compile this project, run `make` in project directory.
 
-3. **Usage**
+3. **Usage**:
    - To run directly: `./msh`
    - To install system-wide: `make install`. Make sure, to run as root.
    - Clean: `make clean` removes object files and binary.
