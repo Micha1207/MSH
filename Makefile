@@ -35,6 +35,3 @@ clean:
 
 install:
 	install -m 775 $(TARGET) $(INSTALL_PATH)
-
-uninstall:
-	rm -rf $(INSTALL_PATH)/$(TARGET)
