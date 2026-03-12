@@ -1,5 +1,6 @@
 # MSH
 Simple shell program with bundled-in commands for GNU/Linux distributions.
+
 ---
 
 ## Getting started
@@ -14,6 +15,7 @@ This project is written in **C (compatible with C89)**.
 ### Requirements
 Make sure to have `gcc`, `make` and `git` programs installed on your system.
 You can use your package manager (e.g. apt, dnf).
+
 ---
 
 1. **Download sources**
