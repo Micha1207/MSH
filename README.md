@@ -14,15 +14,25 @@ This project is written in **C (compatible with C89)**.
 
 ### Command usage:
 cat <file>            - show contents of file
+
 cd <path/to/dir>      - change directory
+
 cls, clear            - clear terminal
+
 echo <text>           - echo text or any system variable (starting with $ sign)
+
 ls, dir               - list objects in current directory
+
 mkdir <dir>           - make directory
+
 pwd                   - print working directory
+
 rm <name>             - remove file or directory
+
 run <command>         - run command from $PATH
+
 touch <file>          - create file or update it's time
+
 <command>             - run any command from $PATH
 
 ---
