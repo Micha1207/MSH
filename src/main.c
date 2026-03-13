@@ -19,6 +19,11 @@
 #include "colors.h"
 #include "clear.h"
 
+/* Gets $HOME and creates this file to save entered commands in it. */
+#define HISTORY_FILE ".msh_history"
+
+#define print_prompt() printf("%s[%s%s@%s: %s%s%s]%s$ %s", blue, green, username, hostname, cyan, dir, blue, magenta, reset)
+
 char cmd[512];
 
 /*
@@ -27,8 +32,7 @@ char cmd[512];
  * Returns 0 if success.
  */
 int sh_prompt(char *username, char *hostname, char *dir){
-  printf("%s[%s%s@%s: %s%s%s]%s$ %s", blue, green, username, hostname,
-	 cyan, dir, blue, magenta, reset);
+  print_prompt();
   if (!fgets(cmd, sizeof(cmd), stdin)){
     printf("\n");
     exit(0);
