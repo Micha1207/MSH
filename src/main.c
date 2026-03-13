@@ -19,7 +19,7 @@
 #include "colors.h"
 #include "clear.h"
 
-/* Gets $HOME and creates this file in $HOME to save entered commands in it. */
+/* Define a file in $HOME where MSH command history is saved. */
 #define HISTORY_FILE ".msh_history"
 
 #define print_prompt() printf("%s[%s%s@%s: %s%s%s]%s$ %s", blue, green, username, hostname, cyan, dir, blue, magenta, reset)
