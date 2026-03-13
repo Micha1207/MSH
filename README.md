@@ -25,6 +25,8 @@ run <command>         - run command from $PATH
 touch <file>          - create file or update it's time
 <command>             - run any command from $PATH
 
+---
+
 ### Requirements
 Make sure to have `gcc`, `make` and `git` programs installed on your system.
 You can use your package manager (e.g. apt, dnf).
