@@ -9,8 +9,21 @@ This project is written in **C (compatible with C89)**.
 ### Features
 - Bundled-in commands: MSH comes with minimal: cat, cd, clear, echo, help, ls, mkdir, pwd, rm, run, touch.
 - Run any command from $PATH,
-- Saving entered commands to `~/.msh_history`.
+- Saving entered commands to `~/.msh_history` (can be changed in src/main.c).
 ---
+
+### Command usage:
+cat <file>            - show contents of file
+cd <path/to/dir>      - change directory
+cls, clear            - clear terminal
+echo <text>           - echo text or any system variable (starting with $ sign)
+ls, dir               - list objects in current directory
+mkdir <dir>           - make directory
+pwd                   - print working directory
+rm <name>             - remove file or directory
+run <command>         - run command from $PATH
+touch <file>          - create file or update it's time
+<command>             - run any command from $PATH
 
 ### Requirements
 Make sure to have `gcc`, `make` and `git` programs installed on your system.
