@@ -31,7 +31,7 @@ This project is written in **C (compatible with C89)**.
 
 `run <command>    - run command from $PATH`
 
-`touch <file>     - create file or update it's time`
+`touch <file>     - create file or update its time`
 
 `<command>        - run any command from $PATH`
 
