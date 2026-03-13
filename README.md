@@ -13,27 +13,27 @@ This project is written in **C (compatible with C89)**.
 ---
 
 ### Command usage:
-cat <file> - show contents of file
+`cat <file> - show contents of file`
 
-cd <path/to/dir> - change directory
+`cd <path/to/dir> - change directory`
 
-cls, clear - clear terminal
+`cls, clear - clear terminal`
 
-echo <text> - echo text or any system variable (starting with $ sign)
+`echo <text> - echo text or any system variable (starting with $ sign)`
 
-ls, dir - list objects in current directory
+`ls, dir - list objects in current directory`
 
-mkdir <dir> - make directory
+`mkdir <dir> - make directory`
 
-pwd - print working directory
+`pwd - print working directory`
 
-rm <name> - remove file or directory
+`rm <name> - remove file or directory`
 
-run <command> - run command from $PATH
+`run <command> - run command from $PATH`
 
-touch <file> - create file or update it's time
+`touch <file> - create file or update it's time`
 
-<command> - run any command from $PATH
+`<command> - run any command from $PATH`
 
 ---
 
