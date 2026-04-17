@@ -15,12 +15,8 @@
 #include <unistd.h>
 
 #include "parser.h"
-#include "save-history.h"
 #include "colors.h"
 #include "clear.h"
-
-/* Define a file in $HOME where MSH command history is saved. */
-#define HISTORY_FILE ".msh_history"
 
 #define print_prompt() printf("%s[%s%s@%s: %s%s%s]%s$ %s", blue, green, username, hostname, cyan, dir, blue, magenta, reset)
 
@@ -62,7 +58,6 @@ int main (){
       if (strcmp(cmd, "exit") == 0){
 	exit(0);
       } else {
-	save_history(cmd, hist_file);
 	runcmd(cmd);
       }
     }
