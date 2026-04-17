@@ -49,7 +49,6 @@ int main (){
   
   char homedir_copy[128];
   strncpy(homedir_copy, homedir, sizeof(homedir_copy));
-  char *hist_file = strcat(homedir_copy, "/.msh_history");
   
   while (1){
     char cwd[1024];
