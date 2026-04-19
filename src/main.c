@@ -4,7 +4,7 @@
  *
  * Author:  Micha1207
  * Project: MSH (https://github.com/Micha1207/MSH)
- * Date:    Mar 26, 2026
+ * Date:    Apr 19, 2026
  * License: GNU GPL v3 (full license in LICENSE file)
  * This program comes with NO WARRANTY; to the extent permitted by law.
  */
@@ -18,17 +18,19 @@
 #include "colors.h"
 #include "clear.h"
 
-#define print_prompt() printf("%s[%s%s@%s: %s%s%s]%s$ %s", blue, green, username, hostname, cyan, dir, blue, magenta, reset)
-
 char cmd[512];
 
 /*
  * This function makes a prompt and get's command
- * with all arguments.
+ * with all arguments. Prints and colors, according
+ * to 'exit_status'.
+ * 
  * Returns 0 if success.
  */
-int sh_prompt(char *username, char *hostname, char *dir){
-  print_prompt();
+int sh_prompt(char *username, char *hostname, char *dir, int exit_status){
+  printf("%s[%s%s@%s: %s%s%s](%s%d%s)$ %s", blue, green, username, hostname, cyan, dir,
+	 blue, ((exit_status == 0) ? green : red), exit_status, blue, reset);
+
   if (!fgets(cmd, sizeof(cmd), stdin)){
     printf("\n");
     exit(0);
@@ -49,15 +51,17 @@ int main (){
   
   char homedir_copy[128];
   strncpy(homedir_copy, homedir, sizeof(homedir_copy));
+
+  static int exit_status = 0;
   
   while (1){
     char cwd[1024];
     getcwd(cwd, sizeof(cwd));
-    if (sh_prompt(user, hostname, cwd) == 0){
+    if (sh_prompt(user, hostname, cwd, exit_status) == 0){
       if (strcmp(cmd, "exit") == 0){
 	exit(0);
       } else {
-	runcmd(cmd);
+	exit_status = runcmd(cmd);
       }
     }
   }
