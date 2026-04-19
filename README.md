@@ -9,7 +9,8 @@ This project is written in **C (compatible with C89)**.
 ### Features
 - Bundled-in commands: MSH comes with minimal: cat, cd, clear, echo, help, ls, mkdir, pwd, rm, run, touch.
 - Run any command from $PATH,
-- Saving entered commands to `~/.msh_history` (can be changed in src/main.c).
+- Colorful prompt with exit status,
+- Doesn't save history or doesn't support completition
 ---
 
 ### Command usage:
